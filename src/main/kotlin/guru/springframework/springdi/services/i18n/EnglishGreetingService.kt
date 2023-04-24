@@ -4,7 +4,8 @@ import guru.springframework.springdi.services.GreetingService
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Service
 
-@Profile("EN")
+@Profile("EN", "default")
+//@Profile(value = ["EN", "default"])
 @Service("i18NService")
 @Suppress("unused")
 class EnglishGreetingService : GreetingService {
